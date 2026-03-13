@@ -150,7 +150,7 @@ surveyForm.addEventListener('submit', function(e) {
     const mailProvider = document.getElementById('mail-provider').value;
     
     // Prepare email content
-    const subject = encodeURIComponent('Ruhekandai Home Feedback from ' + name);
+    const subject = encodeURIComponent('Readseek Home Feedback from ' + name);
     const body = encodeURIComponent(
         `Name: ${name}\n` +
         `Email: ${email}\n\n` +
@@ -161,13 +161,13 @@ surveyForm.addEventListener('submit', function(e) {
     let mailtoLink;
     switch(mailProvider) {
         case 'gmail':
-            mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=qa@ruhekandai.com&su=${subject}&body=${body}`;
+            mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=admin@readseek.com&su=${subject}&body=${body}`;
             break;
         case 'outlook':
-            mailtoLink = `https://outlook.live.com/mail/0/deeplink/compose?to=qa@ruhekandai.com&subject=${subject}&body=${body}`;
+            mailtoLink = `https://outlook.live.com/mail/0/deeplink/compose?to=admin@readseek.com&subject=${subject}&body=${body}`;
             break;
         case 'yahoo':
-            mailtoLink = `https://compose.mail.yahoo.com/?to=qa@ruhekandai.com&subject=${subject}&body=${body}`;
+            mailtoLink = `https://compose.mail.yahoo.com/?to=admin@readseek.com&subject=${subject}&body=${body}`;
             break;
         default:
             alert('We only support Gmail, Outlook, and Yahoo Mail. Please select one of these providers.');
